@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{{topic}}
+<ul>
+    {% for entry in entries %}
+    <li>{{entry}}</li>
+    {%empty%}
+    <li>Nao adicionou nenhuma entrada para este topico ainda</li>
+    {% endfor %}
+    <p><a href="#">add a new entry</a></p>
+</ul>
+
+{% endblock content %}
