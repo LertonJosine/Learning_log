@@ -5,11 +5,13 @@
 {{topic}}
 <ul>
     {% for entry in entries %}
-    <li>{{entry}}</li>
+    <li>{{entry.date_added|date:'M D, H:i'}}</li>
+<p>   {{entry.texto|linebreaks}} </p>
     {%empty%}
     <li>Nao adicionou nenhuma entrada para este topico ainda</li>
     {% endfor %}
-    <p><a href="#">add a new entry</a></p>
 </ul>
+<p><a href="{% url 'new_entry' topic.id%}">add a new entry</a></p>
+
 
 {% endblock content %}

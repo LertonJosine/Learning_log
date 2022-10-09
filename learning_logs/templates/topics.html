@@ -10,7 +10,7 @@
     <p>Nao temos nenhum topico adicionado por hora</p>
     
     {% endfor %}
-    <a href="#">Add topics</a>
 </ul>
+<a href="{% url 'new_topic' %}">Add topics</a>
 
 {% endblock content %}
